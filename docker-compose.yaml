@@ -1,0 +1,17 @@
+version: "3"
+services:
+  frontend:
+    container_name: skills_frontend
+    build:
+      context: ./
+      dockerfile: build/Dockerfile.dev
+    volumes:
+      - ./code:/code
+      - node_modules:/code/node_modules
+      - nuxt:/code/.nuxt
+    ports:
+      - 3000:3000
+
+volumes:
+  node_modules:
+  nuxt:
