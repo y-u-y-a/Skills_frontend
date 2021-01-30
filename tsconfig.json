@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    // "typeRoots": ["@types", "node_modules/@types"],
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -16,16 +17,12 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"],
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      "@nuxtjs/axios",
     ]
   },
   "exclude": [

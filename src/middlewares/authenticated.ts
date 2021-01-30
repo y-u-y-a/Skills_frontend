@@ -1,12 +1,16 @@
+import { Context } from '@nuxt/types'
 import { Auth } from '@/plugins/firebase'
 
 // ###############################
 // middleware: リクエストごとに発火
 // ###############################
 
-export default async ({ store, route, redirect }) => {
-  await Auth.onAuthStateChanged((user) => {
+export default ({ store, route, redirect }: Context) => {
+  console.log('middleware')
+  //
+  Auth.onAuthStateChanged((user) => {
     console.log('ログインユーザー:', user)
+    //
     if (user) {
       store.commit('auth/setLoginUser', user)
     } else {

@@ -98,10 +98,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions('user', ['insertProfile']),
-    registerProfile() {
-      this.insertProfile({profile: this.profile});
-    }
+    // ...mapActions('user', ['insertProfile']),
+    // registerProfile() {
+    //   this.insertProfile({profile: this.profile});
+    // }
   }
 }
 </script>

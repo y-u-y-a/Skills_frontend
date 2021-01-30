@@ -1,39 +1,16 @@
-import axios from 'axios'
+import { MutationTree } from 'vuex'
+import { ProjectState } from '@/types'
 
-export const state = () => ({
-  // About
-  title: null,
-  position: null,
-  member_counts: null,
-  industry_type: null,
-  // Work
-  process: [],
-  detail: null,
-  // Period
-  period: {
-    start: null,
-    end: null,
-  },
-  // Develop
-  os: ['Mac', 'windows', 'Linux', 'Ubuntu', 'CentOS7'],
-  db: ['MySQL', 'PostgresQL', 'NoSQL', 'oracle'],
-  lang: ['Python', 'JavaScript', 'Go'],
-  fw: ['Vue.js', 'Laravel', 'Django', 'Docker'],
-  tool: ['Slack', 'ChatWork', 'Asana'],
-})
-
-export const getters = {}
-
-export const mutations = {
+const mutations: MutationTree<ProjectState> = {
   // About
   setTitle: (state, val) => (state.title = val),
   setPosition: (state, val) => (state.position = val),
-  setMemberCounts: (state, val) => (state.member_counts = val),
-  setIndustryType: (state, val) => (state.industry_type = val),
+  setMemberCounts: (state, val) => (state.memberCounts = val),
+  setIndustryType: (state, val) => (state.industryType = val),
   // Period
   setPeriod(state, { start = null, end = null }) {
-    if (start) state.period.start = start
-    if (end) state.period.end = end
+    if (start) state.startAt = start
+    if (end) state.endAt = end
   },
   // Work
   setProcess: (state, vals) => (state.process = vals),
@@ -67,8 +44,4 @@ export const mutations = {
   },
 }
 
-export const actions = {
-  insertProject({ commit }, { data }) {
-    console.log(data)
-  },
-}
+export default mutations

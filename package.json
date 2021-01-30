@@ -13,13 +13,20 @@
     "deploy": "yarn generate:stg && firebase deploy",
     "fmt": "prettier --write src/**/*.js"
   },
-  "prettier": {
-    "printWidth": 120,
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "parser": "typescript"
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@nuxt/types": "^2.14.12",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@types/node": "^14.14.20",
+    "bootstrap-vue": "^2.21.2",
+    "eslint": "^7.17.0",
+    "node-sass": "^5.0.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "nuxt-typed-vuex": "^0.1.22",
+    "prettier": "^2.2.1",
+    "sass-loader": "^10.1.1"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
@@ -27,24 +34,43 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.2.2",
     "core-js": "^3.6.5",
+    "cross-env": "^7.0.3",
     "firebase": "^8.1.1",
     "js-cookie": "^2.2.1",
     "nuxt": "^2.14.6"
   },
-  "devDependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@nuxt/typescript-build": "^2.0.3",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "@types/node": "^14.14.20",
-    "bootstrap-vue": "^2.21.2",
-    "cross-env": "^7.0.3",
-    "eslint": "^7.17.0",
-    "eslint-config-prettier": "^7.1.0",
-    "node-sass": "^5.0.0",
-    "nuxt-fontawesome": "^0.4.0",
-    "nuxt-typed-vuex": "^0.1.22",
-    "prettier": "^2.2.1",
-    "sass-loader": "^10.1.1"
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 300,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "es5",
+    "arrowParens": "always",
+    "parser": "typescript"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module",
+      "project": "./app/tsconfig.json"
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "@typescript-eslint/no-explicit-any": [
+        "off"
+      ]
+    }
   }
 }

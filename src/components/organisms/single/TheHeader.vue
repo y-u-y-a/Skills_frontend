@@ -4,14 +4,14 @@
       <div class="container row justify-content-between align-items-center">
         <h1>
           <NuxtLink to="/">
-            {{ $store.state.APP_NAME }}
+            {{ $env.APP_NAME }}
             <span class="pc">ブラウザでスキルシートを作成・共有</span>
           </NuxtLink>
         </h1>
         <NavList class="nav">
           <template v-slot:content>
             <!-- ログイン時 -->
-            <template v-if="$store.state.auth.login_user">
+            <template v-if="$store.state.auth.loginUser">
               <BorderButton
                 @click="$store.commit('common/togglePage', 'preview')"
                 button_name="プレビュー"
@@ -22,7 +22,7 @@
                 sp_icon="bars" />
             </template>
             <!-- 未ログイン時 -->
-            <template v-else-if="!$store.state.auth.login_user">
+            <template v-else-if="!$store.state.auth.loginUser">
               <BorderLink
                 link_name="ログインする"
                 link="/auth/Login"

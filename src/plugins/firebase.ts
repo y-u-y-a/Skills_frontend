@@ -14,6 +14,7 @@ if (firebase.apps.length == 0) {
 }
 
 export default firebase
+//
 export const Auth = firebase.auth()
 // export const firestore = firebase.firestore();
 // export const analytics = firebase.analytics();
