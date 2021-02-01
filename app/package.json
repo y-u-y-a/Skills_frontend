@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV='dev' nuxt-ts",
-    "stg": "cross-env NODE_ENV='stg' nuxt-ts",
+    "prod": "cross-env NODE_ENV='prod' nuxt-ts",
     "build:dev": "cross-env NODE_ENV='dev' nuxt-ts build",
-    "build:stg": "cross-env NODE_ENV='stg' nuxt-ts build",
+    "build:prod": "cross-env NODE_ENV='prod' nuxt-ts build",
     "start:dev": "cross-env NODE_ENV='dev' nuxt-ts start",
-    "start:stg": "cross-env NODE_ENV='stg' nuxt-ts start",
-    "generate:stg": "cross-env NODE_ENV='stg' nuxt-ts generate",
-    "deploy": "yarn generate:stg && firebase deploy",
+    "start:prod": "cross-env NODE_ENV='prod' nuxt-ts start",
+    "gen:prod": "cross-env NODE_ENV='prod' nuxt-ts generate",
+    "deploy": "yarn gen:prod && firebase deploy",
     "fmt": "prettier --write src/**/*.js"
   },
   "devDependencies": {

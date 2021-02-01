@@ -41,6 +41,11 @@ export type Project = {
 export type RootState = {
   version: string
 }
+export type CommonState = {
+  isPreview: boolean
+  isSidebar: boolean
+  loading: boolean
+}
 export type AuthState = {
   loginUser: User | null
 }
