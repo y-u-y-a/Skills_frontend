@@ -17,6 +17,7 @@ const mutations: MutationTree<CommonState> = {
   },
   //
   togglePreview: (state) => {
+    console.log(state)
     state.isPreview = !state.isPreview
   },
   //
@@ -31,6 +32,6 @@ const mutations: MutationTree<CommonState> = {
 
 export default {
   namespaced: true,
-  state,
+  state: () => state,
   mutations,
 }

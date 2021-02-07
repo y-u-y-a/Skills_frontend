@@ -9,7 +9,7 @@ const state: AuthState = {
 
 export default {
   namespaced: true,
-  state,
+  state: () => state,
   getters,
   actions,
   mutations,

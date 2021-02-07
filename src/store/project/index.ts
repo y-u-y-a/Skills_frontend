@@ -25,7 +25,7 @@ const state: ProjectState = {
 
 export default {
   namespaced: true,
-  state,
+  state: () => state,
   getters,
   actions,
   mutations,
