@@ -14,6 +14,10 @@
 <script>
 export default {
   // TODO:
-  // middleware: 'authenticated'
+  // middleware: 'authenticated',
+  created () {
+    this.$store.strict = false
+    console.log('$store', this.$store)
+  }
 }
 </script>

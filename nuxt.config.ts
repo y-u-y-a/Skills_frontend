@@ -63,12 +63,12 @@ export default {
   },
   //  Alias
   build: {
+    // for vuex
+    transpile: [/typed-vuex/],
     extend(config: any, ctx: any) {
       config.resolve.alias['@plugins'] = '~/plugins'
       config.resolve.alias['@pages'] = '~/pages'
     },
-    // for vuex
-    transpile: [/typed-vuex/],
   },
   // 404
   router: {
