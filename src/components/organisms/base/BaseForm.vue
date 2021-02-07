@@ -6,7 +6,7 @@
       </div>
       <!-- Pageごとに切替 -->
       <slot name="content"></slot>
-      <slot name="bottom-content"></slot>
+      <slot name="content-bottom"></slot>
     </div>
   </div>
 </template>

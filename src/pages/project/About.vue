@@ -25,7 +25,7 @@
           label="案件の業種"
           placeholder="広告" />
       </template>
-      <template v-slot:bottom-content>
+      <template v-slot:content-bottom>
         <PageNation
           pre_link="/"
           next_link="/project/Period" />

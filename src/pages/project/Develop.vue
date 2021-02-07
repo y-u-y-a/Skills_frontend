@@ -54,7 +54,7 @@
             @click="remove($event, 'tool')" />
         </div>
       </template>
-      <template v-slot:bottom-content>
+      <template v-slot:content-bottom>
         <PageNation
           pre_link="/project/Work"
           next_link="/" />

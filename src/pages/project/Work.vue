@@ -12,7 +12,7 @@
           label="業務詳細"
           placehokder="業務の詳細について記述してください。" />
       </template>
-      <template v-slot:bottom-content>
+      <template v-slot:content-bottom>
         <PageNation
           pre_link="/project/Period"
           next_link="/project/Develop" />

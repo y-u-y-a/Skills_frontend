@@ -63,7 +63,7 @@
         label="PR"
         placeholder="自己PRを入力してください。" />
     </template>
-    <template v-slot:bottom-content>
+    <template v-slot:content-bottom>
       <div class="row justify-content-center pb-1">
         <BigButton
           @click="registerProfile"

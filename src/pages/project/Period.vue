@@ -16,7 +16,7 @@
             class="input-group" />
         </div>
       </template>
-      <template v-slot:bottom-content>
+      <template v-slot:content-bottom>
         <PageNation
           pre_link="/project/About"
           next_link="/project/Work" />
