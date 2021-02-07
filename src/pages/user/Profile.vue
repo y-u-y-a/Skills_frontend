@@ -1,5 +1,5 @@
 <template>
-  <Form form_title="プロフィールを入力" class="mb-2">
+  <BaseForm form_title="プロフィールを入力" class="mb-2">
     <template v-slot:content>
       <div class="row justify-content-between">
         <InputGroup
@@ -70,7 +70,7 @@
           button_name="登録する" />
       </div>
     </template>
-  </Form>
+  </BaseForm>
 </template>
 
 

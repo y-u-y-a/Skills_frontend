@@ -1,10 +1,10 @@
 <template>
-  <Form form_title="業務経歴書（スキルシート）" class="preview">
+  <BaseForm form_title="業務経歴書（スキルシート）" class="preview">
     <template v-slot:content>
       <ProfileTable class="mb-2" />
       <ProjectTable />
     </template>
-  </Form>
+  </BaseForm>
 </template>
 
 <style lang="scss" scoped>

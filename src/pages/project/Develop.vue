@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageNav />
-    <Form form_title="開発環境を入力">
+    <BaseForm form_title="開発環境を入力">
       <template v-slot:content>
         <div class="form-group">
           <InputGroup
@@ -59,7 +59,7 @@
           pre_link="/project/Work"
           next_link="/" />
       </template>
-    </Form>
+    </BaseForm>
   </div>
 </template>
 

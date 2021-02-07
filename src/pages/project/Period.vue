@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageNav />
-    <Form form_title="期間を入力">
+    <BaseForm form_title="期間を入力">
       <template v-slot:content>
         <div class="form-calender">
           <InputGroup
@@ -21,7 +21,7 @@
           pre_link="/project/About"
           next_link="/project/Work" />
       </template>
-    </Form>
+    </BaseForm>
   </div>
 </template>
 

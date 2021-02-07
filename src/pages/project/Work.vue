@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageNav />
-    <Form form_title="業務内容を入力">
+    <BaseForm form_title="業務内容を入力">
       <template v-slot:content>
         <CheckboxGroup
           v-model="process"
@@ -17,7 +17,7 @@
           pre_link="/project/Period"
           next_link="/project/Develop" />
       </template>
-    </Form>
+    </BaseForm>
   </div>
 </template>
 

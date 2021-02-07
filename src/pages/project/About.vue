@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageNav />
-    <Form form_title="案件情報を入力">
+    <BaseForm form_title="案件情報を入力">
       <template v-slot:content>
         <InputGroup
           v-model="title"
@@ -30,7 +30,7 @@
           pre_link="/"
           next_link="/project/Period" />
       </template>
-    </Form>
+    </BaseForm>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <AuthForm
+  <BaseAuthForm
     title="新規登録"
     toggle_link="/auth/Login"
     toggle_name="ログイン">
@@ -15,7 +15,7 @@
         @click="$store.dispatch('auth/signIn', params)"
         button_name="新規登録する" />
     </template>
-  </AuthForm>
+  </BaseAuthForm>
 </template>
 
 <script>

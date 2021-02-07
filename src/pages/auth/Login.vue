@@ -1,5 +1,5 @@
 <template>
-  <AuthForm
+  <BaseAuthForm
     title="ログイン"
     toggle_link="/auth/Register"
     toggle_name="新規登録">
@@ -16,7 +16,7 @@
         class="mb-2" />
       <Agreement />
     </template>
-  </AuthForm>
+  </BaseAuthForm>
 </template>
 
 <script>
