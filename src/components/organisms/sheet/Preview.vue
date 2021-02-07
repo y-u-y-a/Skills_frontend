@@ -7,11 +7,6 @@
   </Form>
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style lang="scss" scoped>
 .preview {
   padding-bottom: 5rem;
