@@ -11,18 +11,18 @@
         <NavList class="nav">
           <template v-slot:content>
             <!-- ログイン時 -->
-            <template v-if="$store.state.auth.loginUser">
+            <template v-if="!$store.state.auth.loginUser">
               <BorderButton
-                @click="$store.commit('common/togglePage', 'preview')"
+                @click="$store.commit('common/togglePreview')"
                 button_name="プレビュー"
                 sp_icon="eye" />
               <BorderButton
-                @click="$store.commit('common/togglePage', 'sidebar')"
+                @click="$store.commit('common/toggleSidebar')"
                 button_name="設定"
                 sp_icon="bars" />
             </template>
             <!-- 未ログイン時 -->
-            <template v-else-if="!$store.state.auth.loginUser">
+            <template v-else-if="$store.state.auth.loginUser">
               <BorderLink
                 link_name="ログインする"
                 link="/auth/Login"

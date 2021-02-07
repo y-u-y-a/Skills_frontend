@@ -1,18 +1,10 @@
 <template>
   <div
-    @click.self="$store.commit('common/togglePage', page_name)"
+    @click.self="$store.commit('common/toggleSidebar')"
     class="modal-window">
     <slot name="content"></slot>
   </div>
 </template>
-
-<script>
-export default {
-  props: [
-    'page_name'
-  ]
-}
-</script>
 
 <style lang="scss" scoped>
 .modal-window{

@@ -7,14 +7,8 @@
     <TheFooter />
 
     <transition name="fade">
-      <!-- Preview -->
-      <BaseModal v-if="$store.state.common.isPreview" page_name="preview">
-        <template v-slot:content>
-          <Preview />
-        </template>
-      </BaseModal>
       <!-- TheSidebar -->
-      <BaseModal v-if="$store.state.common.isSidebar" page_name="sidebar">
+      <BaseModal v-if="$store.state.common.isSidebar">
         <template v-slot:content>
           <TheSidebar />
         </template>
@@ -26,13 +20,12 @@
 </template>
 
 <script>
-import Preview from '@pages/project/Preview'
-
 export default {
   // TODO:
   // middleware: 'authenticated',
-  components: {
-    Preview,
-  },
-};
+  mounted () {
+    console.log(this.$store.state.common.isSidebar)
+    console.log(this.$store.state)
+  }
+}
 </script>

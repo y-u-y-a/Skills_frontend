@@ -3,7 +3,7 @@
     <div class="sidebar-wrapper">
       <header>
         <Icon
-          @click="$store.commit('common/togglePage', 'sidebar')"
+          @click="$store.commit('common/toggleSidebar')"
           icon="times" />
       </header>
       <ul>

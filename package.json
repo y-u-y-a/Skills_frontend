@@ -22,6 +22,7 @@
     "@types/node": "^14.14.20",
     "bootstrap-vue": "^2.21.2",
     "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.2.0",
     "node-sass": "^5.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-typed-vuex": "^0.1.22",
@@ -48,29 +49,5 @@
     "trailingComma": "es5",
     "arrowParens": "always",
     "parser": "typescript"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "sourceType": "module",
-      "project": "./app/tsconfig.json"
-    },
-    "env": {
-      "es6": true,
-      "node": true
-    },
-    "rules": {
-      "@typescript-eslint/no-explicit-any": [
-        "off"
-      ]
-    }
   }
 }
